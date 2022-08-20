@@ -1,0 +1,17 @@
+
+.nav-container{
+    display: block;
+
+}
+.menu{
+    list-style: none;
+    
+}
+.items{
+    display: inline-block;
+    padding-right: 10px;
+}
+.all{
+    display: inline-block;
+    background-color: pink;
+}
