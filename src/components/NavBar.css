@@ -1,17 +1,11 @@
+.home .About .contact{
+    text-align: right;
 
-.nav-container{
-    display: block;
+}
 
+.me-auto{
+    text-align: right;
 }
-.menu{
-    list-style: none;
-    
-}
-.items{
-    display: inline-block;
-    padding-right: 10px;
-}
-.all{
-    display: inline-block;
-    background-color: pink;
+.home{
+    color: palevioletred;
 }
