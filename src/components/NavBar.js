@@ -8,6 +8,7 @@ import CartWidget from './CartWidget.js';
 
 
 
+
 const NavBar = () => {
     return ( 
 
