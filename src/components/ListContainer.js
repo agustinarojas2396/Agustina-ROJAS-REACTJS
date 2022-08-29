@@ -5,7 +5,7 @@ const ListContainer = ( {greeting } ) => {
         <div>
             <h1>Hello</h1>
             <p>{greeting}</p>
-            <ItemCount></ItemCount>
+            <ItemCount stock={5}></ItemCount>
         </div>
     );
 
