@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, CardBody, CardHeader, CardText, CardTitle } from "reactstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from "./ItemCount";
 
-const Item = (productos) => {
+const Item =( {productos} )=> {
 
     const { name, price, descripcion } = productos;
     return (

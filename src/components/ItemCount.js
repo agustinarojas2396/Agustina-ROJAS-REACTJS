@@ -22,21 +22,6 @@ const ItemCount = ({stock, addToCart}) => {
         setAgregar(!agregar)
     
     }
-    //useEffect( () => {
-    //    console.log("Contador Montado!")
-        
-    //    return () => {
-    //        console.log("Contador Desmontado")
-    //    }
-    //}, [] )
-    
-    //useEffect(() => {
-    //   if (counter % 2 === 0) {
-    //        console.log(counter)
-    //    }
-        
-    //}, [counter])
-
     return (
         <div className="container my-5">
             <h2>Contador de Producto</h2>

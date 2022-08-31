@@ -1,6 +1,6 @@
-import stock from './Productos'
+import { stock } from '../data/productos'
 
-const pedirDatos = () => {
+export const pedirDatos = () => {
     return new Promise (( resolve, reject ) => {
         setTimeout (() => {
             resolve(stock)
@@ -9,4 +9,3 @@ const pedirDatos = () => {
 }
 
 
-export default pedirDatos;
