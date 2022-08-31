@@ -14,10 +14,10 @@ const NavBar = () => {
 
         <Navbar bg="dark" variant="dark" className="menu">
         <Container className="menu1" >
-            <Navbar.Brand href="#home">E-commerce</Navbar.Brand>
+            <Navbar.Brand href="#home">DistriBA</Navbar.Brand>
             <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#About">About Us</Nav.Link>
+            <Nav.Link href="#About">Productos</Nav.Link>
             <Nav.Link href="#contact">Contacto</Nav.Link>
             </Nav>
             
