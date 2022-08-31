@@ -5,7 +5,7 @@ import ItemCount from "./ItemCount";
 
 const Item =( {productos} )=> {
 
-    const { name, price, descripcion } = productos;
+    const { name, price, descripcion, img } = productos;
     return (
         <div className="d-flex justify-content-evenly carta">
             <div>
@@ -17,6 +17,7 @@ const Item =( {productos} )=> {
             <CardHeader>
                 {name}
             </CardHeader>
+            <img src={img} alt={name}/>
             <CardBody className="cafrta2">
                 <CardTitle tag="h5">
                     {price}

@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react"
-import { pedirDatos } from "../helpers/pedirDatos"
-import ItemList from "./ItemList"
-
-
+import { useEffect, useState } from "react";
+import { pedirDatos } from "../helpers/pedirDatos";
+import ItemList from "./ItemList";
+import '../css/ItemListContainer.css';
 
 
 const ItemListContainer = () => {
@@ -23,7 +22,7 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <ItemList productos={productos}/>
+            <ItemList className="productos" productos={productos}/>
         </div>
     )
 }
