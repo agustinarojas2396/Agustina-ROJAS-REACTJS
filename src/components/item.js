@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardBody, CardHeader, CardText, CardTitle } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 const Item =( {productos} )=> {
 
@@ -26,6 +27,7 @@ const Item =( {productos} )=> {
                     {descripcion}
                 </CardText>
                 <ItemCount initial={1} stock={5}/>
+                <Link to={`/item/${productos.id}`}>Más info</Link>
             </CardBody>
         </Card>
         </div>

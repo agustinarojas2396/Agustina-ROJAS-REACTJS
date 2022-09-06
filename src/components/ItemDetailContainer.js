@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
             })
         // setear el estado con un único producto
 
-    }, [])
+    }, [itemId])
 
     return (
         <div>
