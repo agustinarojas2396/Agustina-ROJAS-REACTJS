@@ -8,7 +8,7 @@ const Select = ({options = [], onSelect}) => {
     return (
         <select onChange={handleSelect}>
             {
-                options.map((opt) => <option key={opt.value} value={opt.value}></option>)
+                options.map((opt) => <option key={opt.value} value={opt.value}>{opt.value}</option>)
             }
         </select>
     )
