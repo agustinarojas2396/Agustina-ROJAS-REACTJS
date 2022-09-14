@@ -9,14 +9,18 @@ import Alimentos from './components/Alimentos';
 import Contacto from './components/Contacto';
 import Accesorios from './components/Accesorios';
 import Premium from './components/Premium';
+import { CartProvider } from './context/CartContext';
+import Cart from '../src/cart/Cart';
+import { DarkModeProvider } from './context/DarkModeContact';
 
 
+const App = () => {
 
 
-function App() {
   return (
+    <CartProvider>
+      <DarkModeProvider>
 
-    
     <BrowserRouter>
     <NavBar/>
     <Routes className = "App">
@@ -26,11 +30,15 @@ function App() {
       <Route path="/contacto" element={<Contacto/>}/>
       <Route path="/Accesorios" element={<Accesorios/>}/>
       <Route path="/Premium" element={<Premium/>}/>
+      <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
+      <Route path='/cart' element={<Cart/>}/>
 
 
       <Route path='*' element={ <Navigate to="/"/>} />
     </Routes>
 </BrowserRouter>
+    </DarkModeProvider>
+    </CartProvider>
 
   );
 }

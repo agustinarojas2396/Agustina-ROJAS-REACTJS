@@ -3,8 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import CartWidget from './CartWidget.js';
+import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
+
 
 
 
@@ -19,6 +20,7 @@ const NavBar = () => {
             <Link to='/Accesorios' className="header-navlink">Accesorios</Link>
             <Link to='/Contacto' className="header-navlink">Contacto</Link>
             <Link to='/Premium' className="header-navlink">Premium</Link>
+
             </Nav>
             
         </Container>

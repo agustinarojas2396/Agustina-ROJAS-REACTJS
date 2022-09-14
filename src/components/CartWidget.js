@@ -1,14 +1,18 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-
+import { useContext } from 'react'
+import { BsFillCartCheckFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
 
 const CartWidget = () => {
+
+    const { cartQuantity } = useContext(CartContext)
+
     return (
-        <div>
-        <FontAwesomeIcon icon={faCartShopping} style = {{color: "white"}}/>
-        </div>
-        )
+        <Link to="/cart">
+            <BsFillCartCheckFill/>
+            <span>{cartQuantity()}</span>
+        </Link>
+    )
 }
 
-export default CartWidget;
+export default CartWidget
