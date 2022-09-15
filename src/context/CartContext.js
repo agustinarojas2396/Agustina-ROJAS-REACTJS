@@ -32,13 +32,13 @@ export const CartProvider = ({children}) => {
 
     const emptyCart = () => {
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Estas seguro que deseas vaciar el carrito?',
+            text: "Perderas lo que has cargado!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Si, estoy seguro!'
         }).then((result) => {
             if (result.isConfirmed) {
                 setCart([])
