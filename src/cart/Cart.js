@@ -15,10 +15,10 @@ const Cart = () => {
 
             { cart.map((item) => (
                 <div key={item.id}>
-                    <h3>{item.name}</h3>
-                    <p>Precio: {item.price}</p>
-                    <p>Cantidad: {item.stock}</p>
+                    <h3>{item.nombre}</h3>
+                    <p>Precio: {item.precio}</p>
                     <small>kg: {item.kg}</small>
+                    <p>Cantidad: {item.cantidad}</p>
 
                     <button onClick={() => removeItem(item.id)} className="btn btn-danger mx-2"><BsFillTrashFill/></button>
                     <hr/>
