@@ -18,8 +18,8 @@ const ItemDetail = ({item}) => {
     const handleAgregar = () => {
         const itemToCart = {
             id: item.id,
-            precio: item.precio,
-            nombre: item.nombre,
+            precio: item.price,
+            nombre: item.name,
             kg,
             cantidad,
         }
