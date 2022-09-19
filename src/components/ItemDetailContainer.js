@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { pedirDatos } from "../helpers/pedirDatos"
 import { useParams } from 'react-router-dom'
 import ItemDetail from "./ItemDetail"
+import Loader from "./Loader"
 
 const ItemDetailContainer = () => {
 
@@ -30,14 +31,13 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            {
-                loading
-                ? <h2>Loading...</h2>
-                : <ItemDetail item={item} />
-            }
-            
+        {
+            loading
+            ? <Loader/>
+            : <ItemDetail item={item} />
+        }
 
-        </div>
+    </div>
     )
 }
 

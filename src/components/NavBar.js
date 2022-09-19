@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
+    
     return ( 
 
         <Navbar bg="dark" variant="dark" className="menu">
@@ -25,6 +26,7 @@ const NavBar = () => {
             
         </Container>
         <CartWidget></CartWidget>
+        
         </Navbar>
 
 );
