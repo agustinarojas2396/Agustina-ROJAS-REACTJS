@@ -1,9 +1,11 @@
-import { useEffect, useState, useParams } from "react";
+import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
+import { useParams } from 'react-router-dom';
 import '../scss/ItemListContainer.scss';
 import { db } from '../Firebase/config';
 import { collection, getDocs, query, where } from "firebase/firestore";
 import Loader from "./Loader"
+
 
 
 
@@ -14,7 +16,7 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         setLoading(true)
-        const productosRef = collection(db, 'productos')
+        const productosRef = collection(db, 'alimentos')
         const q = categoryId 
                     ? query(productosRef, where('category', '==', categoryId) )
                     : productosRef

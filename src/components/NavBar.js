@@ -15,9 +15,9 @@ const NavBar = () => {
 
         <Navbar bg="dark" variant="dark" className="menu">
         <Container className="menu1" >
-            <Navbar.Brand href="/">DistriBA</Navbar.Brand>
+            <Link to="/"><Navbar.Brand href="/">DistriBA</Navbar.Brand></Link> 
             <Nav className="me-auto">
-            <Link to='/Alimentos' className="header-navlink">Alimentos</Link>
+            <Link to='/alimentos' className="header-navlink">Alimentos</Link>
             <Link to='/Accesorios' className="header-navlink">Accesorios</Link>
             <Link to='/Contacto' className="header-navlink">Contacto</Link>
             <Link to='/Premium' className="header-navlink">Premium</Link>
