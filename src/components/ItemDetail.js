@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
 
 
     const [cantidad, setCantidad] = useState(1)
-    const [kg,setkg] = useState(item.options[0].value)
+    const [kg,setkg] = useState(item.kg[0])
 
     
     const handleAgregar = () => {
