@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useParams } from "react";
 import ItemList from "./ItemList";
 import '../scss/ItemListContainer.scss';
-import { db } from '../../src/Firebase/config';
-import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from '../Firebase/config';
+import { collection, getDocs, query, where } from "firebase/firestore";
+import Loader from "./Loader"
+
 
 
 const ItemListContainer = () => {
-    const [productos, ] = useState([])
+    const [productos, setProductos ] = useState([])
+    const { categoryId } = useParams ([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         setLoading(true)
@@ -30,8 +34,12 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <ItemList className="productos" productos={productos}/>
-        </div>
+            {
+                loading 
+                ? <Loader/>
+                : <ItemList productos={productos}/>
+            }
+        </div>   
     )
 }
 

@@ -34,6 +34,7 @@ const ItemDetail = ({item}) => {
             <img src={item.img} alt="Foto de la marca"/>
             <h4>{item.price}</h4>
             <p>{item.descripcion}</p>
+            <p>{item.category}</p>
             <hr/>
             <hr/>
             <Select options= {item.options} onSelect={setkg}/>

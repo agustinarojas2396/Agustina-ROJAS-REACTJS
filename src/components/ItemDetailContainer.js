@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import ItemDetail from "./ItemDetail"
 import Loader from "./Loader"
 import { doc, getDoc } from "firebase/firestore"
-import { db } from "../../firebase/config"
+import { db } from "../Firebase/config"
 
 const ItemDetailContainer = () => {
 
@@ -27,7 +27,6 @@ const ItemDetailContainer = () => {
             .finally(() => {
                 setLoading(false)
             })
-        // setear el estado con un único producto
 
     }, [itemId])
 
