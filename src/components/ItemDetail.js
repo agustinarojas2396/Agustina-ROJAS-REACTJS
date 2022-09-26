@@ -37,7 +37,7 @@ const ItemDetail = ({item}) => {
             <p>{item.category}</p>
             <hr/>
             <hr/>
-            <Select options= {item.options} onSelect={setkg}/>
+            <Select options= {item.kg} onSelect={setkg}/>
             <hr/>
 
 

@@ -9,9 +9,10 @@ import Loader from "./Loader"
 
 
 
+
 const ItemListContainer = () => {
     const [productos, setProductos ] = useState([])
-    const { categoryId } = useParams ([])
+    const { categoryId } = useParams ()
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -33,6 +34,8 @@ const ItemListContainer = () => {
             })
 
     }, [categoryId])
+
+
 
     return (
         <div>

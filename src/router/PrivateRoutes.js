@@ -7,6 +7,7 @@ import Contacto from '../components/Contacto';
 import Accesorios from '../components/Accesorios';
 import Premium from '../components/Premium';
 import Cart from '../cart/Cart';
+import Checkout from '../components/Checkout';
 
 const PrivateRoutes = () => {
 
@@ -23,6 +24,7 @@ const PrivateRoutes = () => {
                 <Route path="/Premium" element={<Premium/>}/>
                 <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
                 <Route path='/cart' element={<Cart/>}/>
+                <Route path='/checkout' element={<Checkout/>}/>
                 <Route path='*' element={ <Navigate to="/"/>} />
             </Routes>
         </>

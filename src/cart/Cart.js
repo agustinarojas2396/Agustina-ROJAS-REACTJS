@@ -7,8 +7,7 @@ const Cart = () => {
     const { cart, cartTotal, emptyCart, removeItem } = useCartContext()
 
     if (cart.length === 0) {
-        return ( // <EmptyCart />
-        // <Navigate to="/"/>
+        return ( 
             <div className="container my-5">
                 <h2>Tu carrito está vacío</h2>
                 <hr/>
@@ -37,7 +36,8 @@ const Cart = () => {
 
 
             <h4>Total: ${cartTotal()}</h4>
-            <button onClick={emptyCart} className="btn btn-danger">Vaciar carrito</button>
+            <button onClick={emptyCart} className="btn btn-danger">Vaciar carrito</button>    
+            <Link className="btn btn-success mx-3" to="/checkout">Terminar mi compra</Link> 
         </div>
     )
 }
