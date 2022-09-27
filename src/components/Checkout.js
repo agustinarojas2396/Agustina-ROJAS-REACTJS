@@ -22,7 +22,8 @@ const Checkout = () => {
         const orden = {
             comprador: values,
             items: cart,
-            total: cartTotal()
+            fecha: new Date(),
+            total: cartTotal(),
         }
         
         if (values.nombre.length < 2) {

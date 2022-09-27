@@ -15,8 +15,8 @@ const usuarios = [
         password: '1234'
     },
     {
-        email: 'conrado@lanusse.com',
-        password: 'coder'
+        email: 'francisco@gmail.com',
+        password: 'pancho'
     }
 ]
 

@@ -10,7 +10,7 @@ export const useFetch = (url, dep = []) => {
         fetch(url)
             .then(resp => resp.json())
             .then(data => setData(data))
-    },dep)
+    }, dep )
 
     return ({
         data
