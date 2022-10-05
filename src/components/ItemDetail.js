@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../src/context/CartContext";
 import Counter from "./Counter";
 import Select from "./Select";
+import '../scss/ItemDetail.scss';
 
 
 const ItemDetail = ({item}) => {
@@ -12,7 +13,7 @@ const ItemDetail = ({item}) => {
 
 
     const [cantidad, setCantidad] = useState(1)
-    const [kg,setkg] = useState(item.kg[0])
+    const [opcion,setopcion] = useState(item.opcion[0])
 
     
     const handleAgregar = () => {
@@ -20,7 +21,7 @@ const ItemDetail = ({item}) => {
             id: item.id,
             precio: item.price,
             nombre: item.name,
-            kg,
+            opcion,
             cantidad,
         }
         
@@ -31,13 +32,12 @@ const ItemDetail = ({item}) => {
 
         <div className="container my-5">
             <h3>{item.name}</h3>
-            <img src={item.img} alt="Foto de la marca"/>
+            <img className="foto" src={item.img} alt="Foto de la marca"/>
             <h4>{item.price}</h4>
             <p>{item.descripcion}</p>
             <p>{item.category}</p>
             <hr/>
-            <hr/>
-            <Select options= {item.kg} onSelect={setkg}/>
+            <Select options= {item.opcion} onSelect={setopcion}/>
             <hr/>
 
 

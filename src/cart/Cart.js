@@ -26,7 +26,7 @@ const Cart = () => {
                 <div key={item.id}>
                     <h3>{item.nombre}</h3>
                     <p>Precio: {item.precio}</p>
-                    <small>kg: {item.kg}</small>
+                    <small>Opcion: {item.opcion}</small>
                     <p>Cantidad: {item.cantidad}</p>
 
                     <button onClick={() => removeItem(item.id)} className="btn btn-danger mx-2"><BsFillTrashFill/></button>

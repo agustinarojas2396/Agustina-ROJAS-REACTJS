@@ -16,7 +16,6 @@ const Contacto = () => {
                 <input 
                     type={'text'}
                     className='form-control my-2'
-                    // onChange={}
                 />
 
                 <button className="btn btn-primary" type="submit">Enviar</button>

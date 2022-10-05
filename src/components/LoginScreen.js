@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { LoginContext } from "../context/LoginContext"
 import { useForm } from "../hooks/useForm"
-
+import "../scss/LoginScreen.scss"
 
 
 
@@ -22,7 +22,15 @@ const LoginScreen = () => {
 
     return (
         <div style={{backgroundColor: 'bisque'}}>
+            
             <form onSubmit={handleSubmit} className="container py-5">
+                <div className="container my-5">
+                <h2>Inicio de sesión</h2>
+                <hr></hr>
+                </div>
+                <div> 
+                <h3 className="palabras">Email:</h3>
+                </div>
                 <input 
                     name= "email"
                     type={'email'}
@@ -30,6 +38,9 @@ const LoginScreen = () => {
                     value={values.email}
                     onChange={handleInputChange}
                 />
+                <div>
+                <h3 className="palabras">Contraseña:</h3>
+                </div>
                 <input 
                     name="pass"
                     type={'password'}

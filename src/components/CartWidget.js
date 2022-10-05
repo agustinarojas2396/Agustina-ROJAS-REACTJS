@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { BsFillCartCheckFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
+import "../scss/CartWidget.scss"
 
 const CartWidget = () => {
 
@@ -10,7 +11,7 @@ const CartWidget = () => {
     return (
         <Link to="/cart" className={`widget ${cart.length > 0 ? 'widget-visible' :''}`}>
             <BsFillCartCheckFill/>
-            <span>{cartQuantity()}</span>
+            <span className="carrito">{cartQuantity()}</span>
         </Link>
     )
 }

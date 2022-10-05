@@ -1,35 +1,35 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { collection, getDocs, query, where} from 'firebase/firestore'
-import { db } from '../firebase/config'
+import { db } from '../Firebase/config'
 
 export const useProductos = () => {
-    const [item, setItem] = useState([])
+    const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const { itemId } = useParams()
+    const { categoryId } = useParams()
 
     useEffect(() => {
         setLoading(true)
-        const productosRef = collection(db, 'alimentos')
-        const q = itemId 
-                    ? query(productosRef, where('category', '==', itemId) )
+        const productosRef = collection(db, 'productos')
+        const q = categoryId 
+                    ? query(productosRef, where('category', '==', categoryId) )
                     : productosRef
 
         getDocs(q)
             .then((resp) => {
                 const productosDB = resp.docs.map( (doc) => ({id: doc.id, ...doc.data()}) )
-                console.log(productosDB)
+                setProductos(productosDB)
 
-                setItem(productosDB)
+                setProductos(productosDB)
             })
             .finally(() => {
                 setLoading(false)
             })
-
-    }, [itemId])
+        
+    }, [categoryId])
 
     return ({
-        item, loading
+        productos, loading, categoryId
     })
 }

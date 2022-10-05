@@ -1,39 +1,26 @@
 import React from "react";
-import { Card, CardBody, CardHeader, CardText, CardTitle } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
+import "../scss/item.scss"
 
-const Item =( {productos} )=> {
+    const Item = ( {producto} ) => {
+        
+        const { name, img } = producto;
 
-    const { name, price, descripcion, img } = productos;
-    return (
-        <div className="d-flex justify-content-evenly carta">
-            <div>
-            <Card
-            className="my-2"
-            style={{
-            width: '18rem'
-            }}>
-            <CardHeader>
-                {name}
-            </CardHeader>
-            <img src={img} alt={name}/>
-            <CardBody className="cafrta2">
-                <CardTitle tag="h5">
-                    {price}
-                </CardTitle>
-                <CardText>
-                    {descripcion}
-                </CardText>
-                <ItemCount initial={1} stock={5}/>
-                <Link to={`/item/${productos.id}`}>Más info</Link>
-            </CardBody>
-        </Card>
-        </div>
-        </div>
-    )
-}
+        return (
+            <div className="prod">
+                <img className="foto" src={img} alt={name}/>
+                <h4>{producto.nombre}</h4>
+                <p>Precio: {producto.precio}</p>
+                <small>Stock disponible: {producto.stock}</small>
+                <p>{producto.desc}</p>
+                {
+                    producto.stock > 0
+                    ? <Link to={`/item/${producto.id}`} className="btn btn-primary my-2">Ver más</Link>
+                    : <p className='btn btn-outline-danger'>No hay stock de este producto</p>
+                }
+            </div>
+        )
+    }
 
-
-export default Item;
+export default Item

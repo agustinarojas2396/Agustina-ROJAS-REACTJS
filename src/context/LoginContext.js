@@ -1,7 +1,5 @@
 import { createContext, useContext, useState } from "react";
 
-
-
 export const LoginContext = createContext()
 
 const usuarios = [
@@ -31,17 +29,27 @@ export const LoginProvider = ({children}) => {
     const login = (values) => {
         const match = usuarios.find(user => user.email === values.email)
 
+
         if (match) {
             if (match.password === values.pass) {
                 setUser({
                     user: match.email,
-                    logged: true
+                    logged: true,
+                    error: ''
                 })
             } else {
-                alert("Password incorrecto")
+                setUser({
+                    user: '',
+                    logged: false,
+                    error: "Password incorrecto"
+                })
             }
         } else {
-            alert("Email incorrecto")
+            setUser({
+                user: '',
+                logged: false,
+                error: "Email incorrecto"
+            })
         }
     }
 
@@ -49,13 +57,14 @@ export const LoginProvider = ({children}) => {
         setUser({
             user: '',
             logged: false,
-            error: "Password incorrecto"
+            error: ''
         })
     }
 
 
     return (
         <LoginContext.Provider value={{user, login, logout}}>
+        
             {children}
         </LoginContext.Provider>
     )
