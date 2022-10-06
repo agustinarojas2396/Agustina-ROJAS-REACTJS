@@ -4,7 +4,7 @@ const Contacto = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        console.log(event)
+        (event)
     }
 
     return (

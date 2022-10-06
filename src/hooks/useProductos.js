@@ -6,7 +6,6 @@ import { db } from '../Firebase/config'
 export const useProductos = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
-
     const { categoryId } = useParams()
 
     useEffect(() => {
@@ -15,12 +14,9 @@ export const useProductos = () => {
         const q = categoryId 
                     ? query(productosRef, where('category', '==', categoryId) )
                     : productosRef
-
         getDocs(q)
             .then((resp) => {
                 const productosDB = resp.docs.map( (doc) => ({id: doc.id, ...doc.data()}) )
-                setProductos(productosDB)
-
                 setProductos(productosDB)
             })
             .finally(() => {
