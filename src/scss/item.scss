@@ -3,4 +3,22 @@
     align-items: center;
     .foto{
     max-width: 20rem;
-}}
+    margin-bottom: 20px;}
+    .boton{
+        color: white;
+        background-color: rgb(170, 39, 39);
+        border-radius: 30px;
+        border: 10px;
+        margin-bottom: 20px
+    }
+    .nostock{ 
+        color: white;
+        border-radius: 30px;
+        border: 10px;
+    }
+    .titulo{
+        text-decoration: underline;
+        margin-bottom: 20px;
+    }
+
+}

@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react"
-import { useParams } from 'react-router-dom'
-import ItemDetail from "./ItemDetail"
-import Loader from "./Loader"
-import { doc, getDoc } from "firebase/firestore"
-import { db } from "../Firebase/config"
+import { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
+import ItemDetail from "./ItemDetail";
+import Loader from "./Loader";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../Firebase/config";
 
 const ItemDetailContainer = () => {
 
@@ -11,9 +11,6 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const {itemId} = useParams()
-
-    console.log(itemId)
-    console.log(item)
 
     useEffect(() => {
         setLoading(true)
@@ -30,10 +27,10 @@ const ItemDetailContainer = () => {
     }, [itemId])
 
     return (
-        <div>
+        <div className="loader">
         {
             loading
-            ? <Loader/>
+            ? <Loader className="loader"/>
             : <ItemDetail item={item} />
         }
 

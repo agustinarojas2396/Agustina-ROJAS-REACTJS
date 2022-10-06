@@ -9,11 +9,11 @@ import '../scss/ItemDetail.scss';
 const ItemDetail = ({item}) => {
 
     const { cart, addToCart, isInCart } = useCartContext()
-    console.log(cart)
+    useCartContext(cart)
 
 
     const [cantidad, setCantidad] = useState(1)
-    const [opcion,setopcion] = useState(item.opcion[0])
+    const [opcion,setopcion] = useState(item.opcion)
 
     
     const handleAgregar = () => {

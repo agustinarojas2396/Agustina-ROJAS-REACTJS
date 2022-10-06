@@ -1,0 +1,26 @@
+@mixin botones {
+    color: white;
+    border-radius: 30px;
+    border: 10px;  
+    }
+
+.restar{
+    @include botones();
+    background-color: darksalmon;
+    &:hover{ background-color: rgb(190, 127, 44);
+    }}
+
+
+.sumar{
+    @include botones();
+    background-color: rgb(170, 39, 39);
+    &:hover{ background-color: rgb(138, 83, 12);
+    }
+}
+
+.agregar{
+    @include botones();
+    background-color: rgb(221, 0, 0);
+    &:hover{ background-color: rgb(139, 0, 0);
+    }
+}

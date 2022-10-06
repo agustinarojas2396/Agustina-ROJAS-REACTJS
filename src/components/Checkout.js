@@ -4,6 +4,7 @@ import { useCartContext } from "../context/CartContext"
 import { addDoc, collection, getDocs, writeBatch, query, where, documentId } from 'firebase/firestore'
 import { db } from "../Firebase/config"
 import { useForm } from "../hooks/useForm"
+import "../scss/Checkout.scss"
 
 const Checkout = () => {
 
@@ -63,7 +64,6 @@ const Checkout = () => {
                 .then(() => {
                     addDoc(ordenesRef, orden)
                         .then((doc) => {
-                            console.log(doc.id)
                             setOrderId(doc.id)
                             terminarCompra()
                         })
@@ -72,7 +72,7 @@ const Checkout = () => {
         } else {
 
             alert("Hay items sin stock")
-            console.log(outOfStock)
+            (outOfStock)
         }
 
     }

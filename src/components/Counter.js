@@ -1,3 +1,5 @@
+import "../scss/Counter.scss"
+
 
 const Counter = ({max, counter, setCounter, handleAgregar}) => {
 
@@ -17,7 +19,7 @@ const Counter = ({max, counter, setCounter, handleAgregar}) => {
     return (
         <div>
             <button 
-                className={`btn mx-2 ${counter === 0 ? "btn-outline-danger" : "btn-outline-primary"} ${counter === 0 ? 'counter-disabled' :''}`}
+                className={`btn mx-2 ${counter === 0 ? "btn-outline-danger" : "restar btn-outline-primary"} ${counter === 0 ? 'counter-disabled' :''}`}
                 onClick={handleRestar}
             >
                 -
@@ -26,7 +28,7 @@ const Counter = ({max, counter, setCounter, handleAgregar}) => {
             <span className="mx-3">{counter}</span>
 
             <button 
-                className={counter === max ? "btn btn-danger" : "btn btn-primary"}
+                className={counter === max ? "btn btn-danger" : " sumar btn btn-primary"}
 
                 onClick={handleSumar}
             >
@@ -34,7 +36,7 @@ const Counter = ({max, counter, setCounter, handleAgregar}) => {
             </button>
 
             <br/>
-            <button disabled={counter === 0} onClick={handleAgregar} className="btn btn-success my-2">
+            <button disabled={counter === 0} onClick={handleAgregar} className="agregar btn btn-success my-2">
                 Agregar al carrito
             </button>
         </div>

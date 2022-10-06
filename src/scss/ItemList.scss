@@ -1,11 +1,11 @@
 
 .my-5{ 
+    align-items: center;
     .cards{
         display: flex ;
         flex-wrap: wrap;
         text-align: center;
-        .d-flex{
-        padding-left: 2rem;}
+        align-items: center;
     }
     
 

@@ -8,10 +8,10 @@ const ItemListContainer = () => {
     const { productos, loading} = useProductos()
 
     return (
-        <div>
+        <div className="loader">
             {
                 loading 
-                ? <Loader/>
+                ? <Loader className="loader"/>
                 : <ItemList productos={productos}/>
             }
 
