@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 import { useLoginContext } from '../context/LoginContext';
+import logo from '../assets/logo.png';
 
 
 
@@ -15,11 +16,9 @@ const NavBar = () => {
     const {user, logout} = useLoginContext()
     
     return ( 
-
         <Navbar bg="dark" variant="dark" className="menu">
         <Container className="menu1" >
-            <Link to="/"><Navbar.Brand href="/">DistriBA</Navbar.Brand></Link> 
-
+            <Link to='/'><img src={logo} alt="logo" className="logo"></img></Link>
             <Nav className="me-auto">
             <Link to='/productos/alimentos' className="header-navlink">Alimentos</Link>
             <Link to='/productos/accesorios' className="header-navlink">Accesorios</Link>
@@ -34,8 +33,7 @@ const NavBar = () => {
             </div>
         
         </Navbar>
-
-);
+    );
 }
 
 export default NavBar
